@@ -1,7 +1,22 @@
 
 def count_char(cadena, caracter):
-    """Cuenta cuántas veces aparece 'caracter' en 'cadena' validando reglas."""
+    """
+    Cuenta cuántas veces aparece un carácter específico en una cadena.
 
+    Parámetros:
+    cadena (str): Cadena que se desea evaluar.
+    caracter (str): Carácter que se desea contar.
+
+    Retorna:
+    tuple: (codigo, cantidad)
+        codigo (int): Código de éxito o error.
+             0 -> éxito
+            -100 -> cadena no es un string
+            -200 -> cadena contiene caracteres no permitidos
+            -300 -> parámetro caracter inválido
+        cantidad (int or None): Cantidad de veces que el carácter aparece.
+            None en caso de error.
+    """
     # a) Validar que cadena sea un string
     if not isinstance(cadena, str):
         return -100, None
@@ -24,8 +39,21 @@ def count_char(cadena, caracter):
 
 
 def multiplo_2(base, multiplo):
-    """Multiplica 'base' por 'multiplo' validando reglas y usando bit-shift."""
+    """
+    Multiplica un número base por un múltiplo permitido mediante desplazamientos binarios.
 
+    Parámetros:
+    base (int): Número entero positivo.
+    multiplo (int): Múltiplo permitido (1, 2, 4, 8, 16).
+
+    Retorna:
+    tuple: (codigo, resultado)
+        codigo (int): Código de éxito o error.
+            0 -> éxito
+            1 -> parámetros no son enteros positivos
+            2 -> múltiplo no permitido
+        resultado (int or None): Resultado de la operación, None en caso de error.
+    """
     # a) Validar que ambos sean enteros positivos (o cero)
     if not (isinstance(base, int) and isinstance(multiplo, int)):
         return -400, None
