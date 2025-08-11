@@ -40,7 +40,7 @@ def count_char(cadena, caracter):
 
 def multiplo_2(base, multiplo):
     """
-    Multiplica un número base por un múltiplo permitido mediante desplazamientos binarios.
+    Multiplica un número base por un múltiplo permitido.
 
     Parámetros:
     base (int): Número entero positivo.
@@ -52,7 +52,7 @@ def multiplo_2(base, multiplo):
             0 -> éxito
             1 -> parámetros no son enteros positivos
             2 -> múltiplo no permitido
-        resultado (int or None): Resultado de la operación, None en caso de error.
+        resultado (int or None): Resultado de la operación
     """
     # a) Validar que ambos sean enteros positivos (o cero)
     if not (isinstance(base, int) and isinstance(multiplo, int)):
